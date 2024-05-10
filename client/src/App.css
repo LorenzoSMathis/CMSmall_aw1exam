@@ -1,0 +1,508 @@
+/* ------------------
+        BOOTSTRAP BREAKPOINTS
+   ------------------ */
+/*
+body::before {
+  content: "XS";
+  color: red;
+  font-size: 2rem;
+  font-weight: bold;
+  position: fixed;
+  top: 0;
+  right: 10px;
+}
+
+@media (min-width: 576px) {
+  body::before {
+    content: "SM";
+  }
+}
+
+@media (min-width: 768px) {
+  body::before {
+    content: "MD";
+  }
+}
+
+@media (min-width: 992px) {
+  body::before {
+    content: "LG";
+  }
+}
+
+@media (min-width: 1200px) {
+  body::before {
+    content: "XL";
+  }
+}
+
+@media (min-width: 1400px) {
+  body::before {
+    content: "XXL";
+  }
+}
+*/
+/************************************
+    GLOBALS
+ ************************************/
+.fixed-footer {
+    position: fixed;
+    bottom: 0;
+}
+
+.fixed-header {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+.full-opacity {
+    opacity: 1 !important;
+}
+
+.create-page-main, .backoffice-main, .frontoffice-main, .page-view-main {
+    margin-top: 7.5rem;
+    margin-bottom: 2.5rem;
+    padding-bottom: 2rem;
+    width: 90%;
+    /*box-shadow: 0 0 1.5rem .3rem rgba(0,0,0,0.2);*/
+    border: solid .15rem var(--bs-gray-200);
+}
+
+.create-page-main {
+
+}
+
+.backoffice-main {
+    min-height: calc(100vh - 12.1rem);
+}
+
+.frontoffice-main {
+    min-height: calc(100vh - 17.10rem);
+}
+
+.page-view-main {
+    min-height: calc(100vh - 12.1rem);
+}
+
+.create-page-main-title, .backoffice-main-title, .frontoffice-main-title {
+    color: var(--bs-primary);
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    margin-left: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+}
+
+.button-disabled-cursor {
+    cursor: not-allowed !important;
+    pointer-events: all !important;
+}
+
+.record-deleted {
+    background-color: var(--bs-danger);
+}
+
+.record-deleted:hover {
+    background-color: var(--bs-danger) !important;
+}
+
+.record-updated {
+    background-color: var(--bs-warning);
+}
+
+.record-updated:hover {
+    background-color: var(--bs-warning) !important;
+}
+
+.data-loading-container {
+    margin-top: 25rem;
+    border: solid .4rem var(--bs-primary);
+    border-radius: 1rem;
+    width: 30rem;
+    font-size: 1.2rem;
+    color: var(--bs-primary);
+    padding: 4rem;
+}
+
+.data-loading-container h2 {
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.no-margin {
+    margin-bottom: 0;
+}
+
+.danger-tooltip div:last-child {
+    background-color: var(--bs-danger) !important;
+    color: var(--bs-white) !important;
+}
+
+.danger-tooltip div:first-child {
+    border-color: var(--bs-white) !important;
+}
+
+
+/************************************
+    CMS PAGE STYLE
+ ************************************/
+.cms-h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: capitalize;
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.cms-p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2rem;
+    margin-left: 7.5%;
+    width: 85%;
+}
+
+.cms-image {
+    width: 60%;
+    margin-left: 20%;
+    margin-bottom: 2rem;
+    height: auto;
+}
+
+/************************************
+    HEADER.jsx
+ ************************************/
+.header {
+    height: 5rem;
+    background-color: var(--bs-primary);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    /*box-shadow: 0rem .2rem .7rem .2rem rgba(0,0,0,0.3);*/
+}
+
+.header-title {
+    color: var(--bs-white);
+    margin-bottom: 0;
+    margin-right: 2rem;
+}
+
+.usersection-usericon {
+    color: var(--bs-white);
+}
+
+.usersection-userbutton {
+    opacity: 1 !important;
+    width: 8vw;
+}
+
+.usersection-rolebutton {
+    opacity: 1 !important;
+    width: 8vw;
+}
+
+.usersection-actionbutton-logout {
+    width: 8vw;
+}
+
+.usersection-actionbutton-login {
+    width: 100%;
+}
+
+.changeoffice-button {
+    height: 100%;
+}
+
+
+/************************************
+    FOOTER.jsx
+ ************************************/
+.footer {
+    background-color: var(--bs-dark);
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    color: var(--bs-white);
+    height: 2.1rem;
+}
+
+.footer p {
+    margin-bottom: 0;
+    font-size: .8rem;
+}
+
+
+
+
+/************************************
+    LOGIN.jsx
+ ************************************/
+.login-container {
+    margin-top: 5rem;
+    width: 100%;
+}
+
+.login-form {
+    width: 30rem;
+    height: 22.5rem;
+    margin-top: 10rem;
+    margin-bottom: 3rem;
+    border-radius: 1rem;
+    /*box-shadow: 0 0 1.5rem .3rem rgba(0,0,0,0.2);*/
+    border: solid .15rem var(--bs-gray-300);
+    padding: 2rem 2.5rem;
+}
+
+.login-form-title {
+    color: var(--bs-primary);
+    font-size: 1.5rem;
+    width: 100%;
+    border-bottom: solid .2rem var(--bs-primary);
+}
+
+.login-form-form {
+    margin-top: 2rem;
+}
+
+.login-form-input {
+    height: 5.5rem;
+}
+
+.login-form-input button {
+    height: 3.6rem;
+}
+
+.login-form-submit {
+    width: 10rem;
+    margin-left: 15rem;
+}
+
+.login-error-message {
+    margin-bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+/************************************
+    CRETEPAGE.jsx
+ ************************************/
+.create-page-main-title span {
+    font-size: 1.4rem;
+}
+
+.create-page-edit {
+    min-height: 40.95rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    border: solid .1rem var(--bs-gray-500);
+}
+
+.create-page-edit > .col-4 {
+    border-right: solid .1rem var(--bs-gray-500);
+}
+
+.create-page-edit-section {
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+.create-page-edit-section-title {
+    color: var(--bs-gray-700);
+    margin-left: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.create-page-edit-section-title h3 {
+    font-size: 1.4rem;
+}
+
+.create-page-edit-section-content {
+    min-height: 2rem;
+    margin-bottom: .5rem;
+}
+
+.create-page-edit-section p {
+    margin: 0;
+}
+
+.create-page-edit-section-tabs-header {
+    margin-top: 2rem;
+    height: 3rem;
+}
+
+.create-page-edit-section-tabs-paragraph {
+    margin-top: 2rem;
+    height: 10rem;
+}
+
+.create-page-edit-section-tabs-images {
+    margin-top: 2rem;
+    min-height: 10rem;
+    max-height: 30rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border: solid .1rem var(--bs-gray-500);
+}
+
+.create-page-edit-section-tabs-images div.row {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.create-page-edit-section-tabs-submit {
+    margin-top: 2rem;
+}
+
+.create-page-edit-section-tabs-submit p.error {
+    color: var(--bs-danger);
+    text-decoration: underline;
+}
+
+.create-page-edit-section-tabs-submit p.success {
+    color: var(--bs-success);
+    font-weight: bold;
+}
+
+.create-page-preview-control .row{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.create-page-edit-submit {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-right: 2rem;
+}
+
+.create-page-edit-submit button {
+    width: 9rem;
+}
+
+.create-page-stats span {
+    margin-left: 2rem;
+}
+
+.create-page-stats p {
+    margin-bottom: 0;
+    margin-right: 1rem;
+}
+
+.create-page-main-go-back button {
+    width: 92%;
+}
+
+.my-card {
+    margin-bottom: .3rem;
+    padding: 0;
+    cursor: pointer;
+}
+
+.my-card img {
+    margin: 0;
+    border: solid .2rem var(--bs-gray-300);
+}
+
+.my-card, .my-card img {
+    border-radius: 1rem !important;
+}
+
+.my-card:hover img {
+    border: solid .2rem var(--bs-warning);
+}
+
+.card-checked img {
+    border: solid .2rem var(--bs-success) !important;
+}
+
+.card-checked-icon {
+    color: var(--bs-success);
+    border: solid .2rem var(--bs-gray-400);
+    border-radius: 1.5rem;
+    background-color: var(--bs-gray-300);
+    opacity: .7;
+}
+
+.create-page-edit-section-textarea {
+    height: 20rem !important;
+}
+
+.submitbutton-for-addsection > button {
+    width: 9rem;
+}
+
+/************************************
+    BACKOFFICE - FRONTOFFICE.jsx
+ ************************************/
+
+.backoffice-main-subtitle, .frontoffice-main-subtitle {
+    font-size: 1.8rem;
+    color: var(--bs-primary);
+    width: 100%;
+    text-align: center;
+}
+
+.backoffice-mail-list-header p, .frontoffice-mail-list-header p {
+    font-weight: bold;
+}
+
+.backoffice-mail-list-item .col-1, .backoffice-mail-list-item .col-2, .backoffice-mail-list-item .col-3,  .frontoffice-mail-list-item .col-2, .frontoffice-mail-list-item .col-3{
+    border-left: solid .1rem var(--bs-gray-300);
+}
+
+.backoffice-mail-list-item:hover {
+    background-color: var(--bs-gray-300);
+}
+
+.backoffice-main-list p, .frontoffice-main-list p {
+    margin-bottom: 0;
+}
+
+.backoffice-main-addpage-button button {
+    width: 80%;
+}
+
+.backoffice-page-preview-modal {
+    width: 90vw;
+    height: 90vw;
+}
+
+.frontoffice-main-list-sort button {
+    padding: .1rem .5rem;
+}
+
+/************************************
+    PAGEVIEW.jsx
+ ************************************/
+.page-view-main > .row:first-child {
+    margin-top: 2rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+.page-view-main > .row:last-child {
+    margin-top: 1rem;
+    margin-right: 1rem;
+}
+
+.page-view-page-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 3rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    color: var(--bs-primary);
+}
+
+.page-view-content {
+    border: solid .1rem var(--bs-gray-300);
+}
